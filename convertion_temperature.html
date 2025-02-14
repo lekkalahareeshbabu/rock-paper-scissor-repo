@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>convert Temperate</title>
+  </head>
+    <body>
+      <h1>convert Temperate</h1>
+      
+
+      
+      <script>
+        // function function1(){
+        //   console.log('Hello World');
+        //   console.log(2*2);
+        // }
+
+        // function1();
+        function convertFarenheit(value){
+          return value*1.8+32;
+        }
+
+        function convertCelsius(value){
+          return (value-32)/1.8;
+        }
+
+
+
+        function convertTemperature(value,unit){
+          if (unit=='C'){
+            const result= convertFarenheit(value);
+            return `Farenheit:${result}F`
+          }
+          else if (unit=='F'){
+            const result=convertCelsius(value);
+            return `celsius:${result}C`
+
+          }
+        }
+        console.log(convertTemperature(30,'C'));
+        console.log(convertTemperature(77,'F'));
+      </script>
+    </body>
+    
+
+</html>

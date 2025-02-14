@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title >Addition Calculator</title>
+    <style>
+      body{
+      }
+      .calc{
+        width: 300px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        background-color: black ;
+      }
+      button{
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        margin: 5px; 
+      }
+      .nums{
+        background-color: rgb(126, 126, 195);
+      }
+    </style>
+  </head>
+    <body>
+      
+      <div class="calc">
+        <h1 style="color: aquamarine;">Calculator</h1>
+      <div>
+      <button class="nums", onclick="
+      calculation+='1';
+      console.log(`${calculation}`);
+      "> 1</button>
+      <button class="nums", onclick="
+      calculation+='2';
+      console.log(`${calculation}`);
+      "> 2</button>
+      <button class="nums", onclick="
+      calculation+='3';
+      console.log(`${calculation}`);
+      "> 3</button>
+      <button onclick="
+      calculation+='+';
+      console.log(`${calculation}`);
+      "> + </button>
+      </div>
+      <div>
+      <button class="nums", onclick="
+      calculation+='4';
+      console.log(`${calculation}`);
+      "> 4 </button>
+      <button class="nums", onclick="
+      calculation+='5';
+      console.log(`${calculation}`);
+      "> 5 </button>
+      <button class="nums", onclick="
+      calculation+='6';
+      console.log(`${calculation}`);
+      "> 6 </button>
+      <button onclick="
+      calculation+='-';
+      console.log(`${calculation}`);
+      "> - </button>
+      </div>
+      <div>
+      <button class="nums", onclick="
+      calculation+='7';
+      console.log(`${calculation}`);
+      "> 7 </button>
+      <button class="nums", onclick="
+      calculation+='8';
+      console.log(`${calculation}`);
+      "> 8 </button>
+      <button class="nums", onclick="
+      calculation+='9';
+      console.log(`${calculation}`);
+      "> 9 </button>
+      <button onclick="
+      calculation+='*';
+      console.log(`${calculation}`);
+      "> * </button>
+      </div>
+      <div>
+      <button onclick="
+      calculation+='.';
+      console.log(`total:${calculation}`);
+      "> . </button>
+      <button class="nums", onclick="
+      calculation+='0';
+      console.log(`total:${calculation}`);
+      "> 0 </button>
+      
+      <button onclick="
+      calculation = eval(calculation);
+      console.log(`total:${calculation}`);
+      "> = </button>
+       
+       <button onclick="
+       calculation+='/';
+       console.log(`total:${calculation}`);
+       "> / </button>
+
+       <button onclick="">Result</button>
+       </div>
+      </div>
+      <script>
+        let calculation='';
+
+        
+
+      </script>
+    </body>
+    
+
+</html>

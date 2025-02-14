@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>objects</title>
+  </head>
+    <body>
+      <h1>Objects</h1>
+      
+
+      
+      <script>
+        // const product={
+        //   name:"Laptop",
+        //   price:1200,
+        
+        // console.log(product);
+        // console.log(product.name);
+        // console.log(product.price);
+
+
+        // product.name='HP Laptop';
+        // console.log(product);
+
+        // product.newproperty=true;
+        // console.log(product);
+        
+        // delete product.newproperty;
+   /*
+        const product={
+          name:"Laptop",
+          'deliverytime': '5 days',
+          rating :{
+            star:4.5,
+            count:87
+          },
+          fun:function function1(){
+            console.log('function inside object');
+          }
+        };
+
+        console.log(product);
+        console.log(product.name);
+        console.log(product['name']);
+        console.log(product['deliverytime']);
+        console.log(product.deliverytime);
+
+        console.log(product.rating.count);
+        product.fun();
+
+        console.log(typeof console.log);
+
+
+        console.log(JSON.stringify(product));
+        const jsonstring=JSON.stringify(product);
+
+        console.log(JSON.parse(jsonstring));
+*/
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+
+        const object1={
+          message:'Hello',
+
+        }
+
+        const object2=object1
+
+        object1.message='Good Job';
+
+        console.log(object1);
+        console.log(object2);
+
+        const object3={
+          message:'Good Job'
+        };
+
+         console.log(object1===object2);
+         console.log(object1===object3);
+
+         const object4={
+          message:'Good Job',
+          price:'999'
+        };
+
+        // const message=object4.message;
+        const {message,price}=object4;
+        console.log(message);
+        console.log(price);
+
+        const object5={
+          message,
+          // method: function function1(){
+          //   console.log('method');
+          // }
+          method(){
+            console.log('method');  
+          }
+        };
+        console.log(object5);
+        object5.method(); 
+
+
+      </script>
+
+    </body>
+    
+
+</html>

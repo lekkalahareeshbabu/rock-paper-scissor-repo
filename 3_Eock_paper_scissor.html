@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+</html>
+
+<head>
+    <title>Function-Rock Paper Scissors</title>
+</head>
+<body>
+    <p>Functional Rock Paper Scissors</p>
+    <button onclick="
+    playGame('Rock');
+    ">Rock</button>
+
+    <button onclick=" 
+    playGame('Paper');
+    ">Paper</button>
+
+    <button onclick="    
+    playGame('Scissors');
+    ">Scissors</button>
+
+    <button onclick="
+    score.wins=0,
+    score.losses=0;
+    score.ties=0;
+    localStorage.removeItem('score');
+    ">Reset Score</button>
+
+  <script>
+    let score=JSON.parse(localStorage.getItem('score')) || {wins:0,losses:0,ties:0};
+/*
+    if (!score){
+      score={
+        wins:0,
+        losses:0,
+        ties:0
+      };
+    }
+*/
+
+    function playGame(playerMove){
+      const computerMove=pickComputerMove();
+      let result='';  
+      if (playerMove==='Rock'){
+        if (computerMove==='Rock'){
+          result='Tie';
+        } else if (computerMove==='Paper'){
+          result='Computer Wins';
+        } else if (computerMove==='Scissors'){
+          result='Player Wins';
+        }
+      }
+
+      else if(playerMove==='Paper'){
+        if (computerMove==='Rock'){
+          result='Player Wins';
+        } else if (computerMove==='Paper'){
+          result='Tie';
+        } else if (computerMove==='Scissors'){
+          result='Computer Wins'; 
+        }
+      }
+
+      else if(playerMove==='Scissors'){
+        if (computerMove==='Rock'){
+          result='Computer Wins';
+        } else if (computerMove==='Paper'){
+          result='Player Wins';
+        } else if (computerMove==='Scissors'){
+          result='Tie';
+        }
+      }
+      if (result==='Player Wins'){
+        score.wins++;
+      } else if (result==='Computer Wins'){
+        score.losses++;
+      }
+      else if(result==='Tie'){
+        score.ties++;
+      }
+
+      localStorage.setItem('score',JSON.stringify(score));
+      
+      alert(`Computer :${computerMove}  Player : ${playerMove}  Result: ${result}
+wins:${score.wins} Losses:${score.losses} Ties:${score.ties}`);
+    }
+    
+    function  pickComputerMove(){
+      const randomNumber=Math.random();
+      let computerMove='';
+      
+      if (randomNumber<0.34 && randomNumber>=0){
+        computerMove = 'Rock';
+      } else if (randomNumber<0.67 && randomNumber>=0.34){
+        computerMove ='Paper';
+      } else {
+        computerMove ='Scissors';
+      } 
+      return computerMove;
+    }
+    
+  </script>
+</body> 

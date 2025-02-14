@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+</html>
+
+<head>
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+    const randomNumber=Math.random();
+    let computerMove='';
+    if (randomNumber<0.34 && randomNumber>=0){
+      computerMove = 'Rock';
+    } else if (randomNumber<0.67 && randomNumber>=0.34){
+      computerMove ='Paper';
+    } else {
+      computerMove ='Scissors';
+    } 
+    console.log(computerMove);
+
+    let result='';  
+  
+    if (computerMove==='Rock'){
+      result='Tie';
+    } else if (computerMove==='Paper'){
+      result='computer Wins';
+    } else if (computerMove==='Scissors'){
+      result='Player Wins';
+    }
+      
+    alert(`Computer Move:${computerMove} Player Move: Rock Result:${result}`);
+
+    ">Rock</button>
+    <button onclick="
+    randomNumber=Math.random();
+    if (randomNumber<0.34 && randomNumber>=0){
+      computerMove = 'Rock';
+    } else if (randomNumber<0.67 && randomNumber>=0.34){
+      computerMove ='Paper';
+    } else {
+      computerMove ='Scissors';
+    } 
+    console.log(computerMove);
+    
+    if (computerMove==='Rock'){
+        result='Player Wins';
+      } else if (computerMove==='Paper'){
+        result='Tie';
+      } else {
+        result='Computer Wins';
+      }
+      alert(`Computer Move:${computerMove} Player Move: Paper Result:${result}`);
+    ">Paper</button>
+    <button onclick="
+    randomNumber=Math.random();
+    if (randomNumber<0.34 && randomNumber>=0){
+      computerMove = 'Rock';
+    } else if (randomNumber<0.67 && randomNumber>=0.34){
+      computerMove ='Paper';
+    } else {
+      computerMove ='Scissors';
+    } 
+    console.log(computerMove);
+    
+    if (computerMove==='Rock'){
+        result='Computer Wins';
+      } else if (computerMove==='Paper'){
+        result='Player Wins';
+      } else {
+        result='Tie';
+      }
+      alert(`Computer Move:${computerMove} Player Move: Scissors Result:${result}`);
+    ">Scissors</button>
+
+  <script>
+  </script>
+</body> 

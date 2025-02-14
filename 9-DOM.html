@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>dom</title>
+  </head>
+    <body>
+      <h1 class="js-button">DOm</h1>
+      
+      <button>
+        Hello
+      </button>
+      <button>
+        Second Button
+      </button>
+      
+      <script>
+
+        console.log(document.querySelector('button').innerHTML);
+
+        document.querySelector('.js-button').innerHTML= 'Second Changed';
+
+        const buttonElement=document.querySelector('js-button');
+
+
+
+/*
+        console.log(document.title);
+        document.title='Changed'
+
+        console.log(document.body)
+        console.log(typeof document.body)
+
+        console.log(document.body.innerHTML);
+        document.body.innerHTML='<button>Good Job</button>';
+
+        /*
+        document.body.innerHTML="Hello";
+        document.title="DOM";
+       
+        */
+      </script>
+
+    </body>
+    
+
+</html>

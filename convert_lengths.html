@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>convert Temperate</title>
+  </head>
+    <body>
+      <h1>convert Temperate</h1>
+      
+
+      
+      <script>
+        // function function1(){
+        //   console.log('Hello World');
+        //   console.log(2*2);
+        // }
+
+        // function1();
+        function convertMilesToKm(value){
+          return value*1.60934;
+        }
+
+        function convertKmToMiles(value){
+          return value/1.60934;
+        }
+
+        function convertKmToKm(value){
+          return value;
+        }
+
+
+
+
+        function convertDistance(value,unit1,unit2){
+          if (unit1=='miles' && unit2=='km'){
+            const result= convertMilesToKm(value);
+            return `Distance : ${result}KM`
+          }
+          else if (unit1=='km' && unit2=='miles'){
+            const result=convertKmToMiles(value);
+            return `Distance : ${result}Miles`
+
+          }
+          else if (unit1=='km' && unit2=='km'){
+            const result=convertKmToKm(value);
+            return `Distance : ${result}KM`
+          }
+          else{
+            return 'Invalid Conversion';
+          }
+        }
+
+
+        console.log(convertDistance(50,'miles','km'));
+        console.log(convertDistance(32,'km','miles'));
+        console.log(convertDistance(50,'km','km'));
+        console.log(convertDistance(50,'km','inches'));
+      </script>
+    </body>
+    
+
+</html>
